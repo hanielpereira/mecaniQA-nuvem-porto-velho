@@ -1,0 +1,7 @@
+FROM python:3.12-slim
+ 
+WORKDIR /app
+ 
+COPY gerar_carga.py .
+ 
+CMD ["python", "simulador.py", "--url", "http://api:8000", "--seconds", "30", "--workers", "4"]
